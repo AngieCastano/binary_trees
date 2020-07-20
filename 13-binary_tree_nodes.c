@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <stdio.h>
 /**
  * binary_tree_nodes - measures the ammount of nodes with 1 child
  in a binary tree
