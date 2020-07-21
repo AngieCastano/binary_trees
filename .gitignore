@@ -7,6 +7,7 @@
 5-root
 6-pre
 7-in
+9-height
 8-post
 11-size
 12-leaves
@@ -17,3 +18,5 @@
 9-height
 17-sibling
 18-uncle
+100-ancestor
+101-lvl
