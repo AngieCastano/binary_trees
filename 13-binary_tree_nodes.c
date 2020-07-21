@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
  * binary_tree_nodes - measures the ammount of nodes with 1 child
- in a binary tree
+ * in a binary tree
  * @tree: pointer to the root node of the tree whose leaves will be measured.
  * Return: No of sole childs or 0 if tree is NULL
  */
