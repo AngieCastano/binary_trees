@@ -30,6 +30,12 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	binary_tree_t *traversal = NULL;
 	int check = 1;
 
+	if (!first || !second)
+		return (NULL);
+
+	if (first == second)
+		return ((binary_tree_t *)first);
+
 	if (first->left == second || first->right == second)
 		return ((binary_tree_t *) first);
 	if (second->left == first || second->right == first)
