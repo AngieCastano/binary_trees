@@ -43,8 +43,13 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	traversal = (binary_tree_t *)first;
 	while (check != 0)
 	{
-		traversal = traversal->parent;
-		check = checker(traversal, second);
+		if (traversal->parent)
+		{
+			traversal = traversal->parent;
+			check = checker(traversal, second);
+		}
+		else
+			check = 0;
 	}
 	if (check == 0)
 		return (traversal);
