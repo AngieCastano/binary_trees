@@ -18,6 +18,7 @@ int checker(const binary_tree_t *root, const binary_tree_t *node_to_check)
 	else
 		return (check_right * check_left);
 }
+
 /**
  * binary_trees_ancestor - finds the lowest common ancestor of two nodes
  * @first: pointer to the first node
@@ -40,7 +41,14 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		return ((binary_tree_t *) first);
 	if (second->left == first || second->right == first)
 		return ((binary_tree_t *) second);
-	traversal = (binary_tree_t *)first;
+
+	if (first->left)
+		traversal = (binary_tree_t *)first->left;
+	else if (first->right)
+		traversal = (binary_tree_t *)first->right;
+	else
+		traversal = (binary_tree_t *)first;
+
 	while (check != 0)
 	{
 		if (traversal->parent)
